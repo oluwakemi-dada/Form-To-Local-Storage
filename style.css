@@ -362,4 +362,8 @@ footer a:visited {
   .main-heading {
     font-size: 4rem;
   }
+
+  .card-right {
+    padding: 2.5rem 3rem 4rem 3rem;
+  }
 }
