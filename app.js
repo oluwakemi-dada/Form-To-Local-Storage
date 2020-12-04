@@ -45,11 +45,11 @@ const displayFormFromLocalStorage = () => {
   formInfo.forEach((currFormInfo) => {
     output += `
       <div class='form-output'>
-        <p>Firstname: ${currFormInfo.firstname}</p>
-        <p>Lastname: ${currFormInfo.lastname}</p>
-        <p>Email: ${currFormInfo.email}</p>
-        <p>Phone Number: ${currFormInfo.phoneNo}</p>
-        <p>Message: ${currFormInfo.message}</p>
+        <p><span class='title'>Firstname :</span> ${currFormInfo.firstname}</p>
+        <p><span class='title'>Lastname :</span> ${currFormInfo.lastname}</p>
+        <p><span class='title'>Email :</span> ${currFormInfo.email}</p>
+        <p><span class='title'>Phone Number :</span> ${currFormInfo.phoneNo}</p>
+        <p><span class='title'>Message :</span> ${currFormInfo.message}</p>
       </div>
     `;
   });
@@ -109,7 +109,14 @@ submitBtn.addEventListener('click', (e) => {
   }
 });
 
-viewFormBtn.addEventListener('click', displayFormFromLocalStorage);
+viewFormBtn.addEventListener('click', () => {
+  const formInfo = getFormFromLocalStorage();
+  if (formInfo.length !== 0) {
+    displayFormFromLocalStorage();
+  } else {
+    showMessage('alert error', 'You are yet to submit a data');
+  }
+});
 
 back.addEventListener('click', (e) => {
   if (e.target.classList.contains('back-btn')) {

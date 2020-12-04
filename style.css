@@ -64,31 +64,14 @@ body {
 }
 
 .big-circles {
-  margin-top: 10rem;
+
+  margin-top: 12rem;
 }
 
-.b-circle-1,
-.b-circle-2,
-.b-circle-3 {
-  height: 30rem;
-  width: 30rem;
-  background: transparent;
-  border-radius: 100%;
-  position: absolute;
-}
+.big-circles img {
+  width: 120%;
+  margin-left: -10%;
 
-.b-circle-1 {
-  border: 1px solid #6f6f7c;
-  margin-left: -10rem;
-}
-.b-circle-2 {
-  border: 1px dashed #6f6f7c;
-  transform: translateX(50%);
-}
-.b-circle-3 {
-  border: 1px solid #6f6f7c;
-  /* right: 0; */
-  transform: translateX(133%);
 }
 
 .card-left > div:last-child {
@@ -278,6 +261,10 @@ footer a:visited {
 .error {
   background: #393b44;
   color: #e8e8e9;
+}
+
+.title {
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES */
